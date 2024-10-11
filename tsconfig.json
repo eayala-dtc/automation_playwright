@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "resolveJsonModule": true   //Para que el feature obtenga los datos del archivo json (registerUser.json)
+    },
+    "include": ["src/**/*.ts", "src/helper/types/env.d"],
+    "exclude": ["node_modules"]
+    
+
+  
+     /* "compilerOptions": {
+          "lib": [
+              "es2021"
+          ],
+          "typeRoots": [
+              "./node_modules/@types",
+              "src/helper/types"
+          ],
+          "resolveJsonModule": true
+      }*/
+  
+  }
+  
+  

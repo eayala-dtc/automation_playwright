@@ -1,0 +1,22 @@
+
+Instalar libreria de reporte
+    npm install multiple-cucumber-html-reporter --save-dev
+
+Instalar libreria para manejar directorios (Si el archivo que se solicita crear se encuentra en directorios que no existen, se crean dichos directorios. Si el archivo ya existe, NO SE MODIFICA .)
+    npm i fs-extra -D
+
+Instalar libreria para manejar multiples ambientes en la ruta del proyecto
+    npm i dotenv -D 
+    npm i cross-env -D
+
+
+
+
+
+Para hacer correr el proyecto
+1 npm test o npm run test
+2 
+
+
+
+
