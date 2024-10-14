@@ -15,11 +15,11 @@ export default class RegisterPage {
         userName: "input[formcontrolname='username']",
         password: "input[formcontrolname='password']",
         confirmPassword: "input[formcontrolname='confirmPassword']",
-        maleInput: "input[value='Male']",
+        maleInput: "input[type='radio'][value='Male']",
         femaleInput: "input[value='Female']",
-        maleRadioBtn: "//span[contains(text(),'Male')]", 
-        femaleRadioBtn: "//span[contains(text(),'Female')]",
-        regBtn: "button[color='primary']"
+        maleRadioBtn:  "mat-radio-button[value='Male']", 
+        femaleRadioBtn: "mat-radio-button[value='Female']",
+        regBtn: "button:has-text('Register')"
     }
 
     async navigateToRegisterPage() {
@@ -36,8 +36,9 @@ export default class RegisterPage {
         await this.enterUsername(userName);
         await this.page.type(this.Elements.password, password);
         await this.page.type(this.Elements.confirmPassword, confirmPassword);
+        
         if (gender == "m") {
-            await this.page.click(this.Elements.maleRadioBtn);
+            await this.page.click(this.Elements.maleRadioBtn); 
             await expect(this.page.locator(this.Elements.maleInput)).toBeChecked();
         } else {
             await this.page.click(this.Elements.femaleRadioBtn);
