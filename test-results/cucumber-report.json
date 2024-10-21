@@ -4,56 +4,95 @@
     "elements": [
       {
         "description": "",
-        "id": "register-user;register-new-user",
+        "id": "user-login-test;login-should-be-success",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "Register new User",
+        "line": 16,
+        "name": "Login should be success",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1347382600
+              "duration": 1451185499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "I navigate to the register page",
+            "line": 4,
+            "name": "User navigates to the Genio_webpage",
             "match": {
-              "location": "src\\test\\steps\\registerUsersSteps.ts:12"
+              "location": "src\\test\\steps\\loginGenioSteps.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 3796879199
+              "duration": 26826829099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "User click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginGenioSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5995597099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User enter the email as \"rribera@consultordatec.com.bo\"",
+            "match": {
+              "location": "src\\test\\steps\\loginGenioSteps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2181561300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "User enter the password as \"Reneribera17\"",
+            "match": {
+              "location": "src\\test\\steps\\loginGenioSteps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161359700
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
-            "name": "I created a new user",
+            "line": 11,
+            "name": "User click on the login button",
             "match": {
-              "location": "src\\test\\steps\\registerUsersSteps.ts:18"
+              "location": "src\\test\\steps\\loginGenioSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 2427744200
+              "duration": 2218899
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "I confirm user registration is success",
+            "line": 12,
+            "name": "Login should be success",
             "match": {
-              "location": "src\\test\\steps\\registerUsersSteps.ts:24"
+              "location": "src\\test\\steps\\loginGenioSteps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 438692999
+              "duration": 114007699
             }
           },
           {
@@ -61,24 +100,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 150153200
+              "duration": 287408900
             }
           }
         ],
         "tags": [
           {
             "name": "@smokeTest",
-            "line": 3
+            "line": 7
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "register-user",
+    "id": "user-login-test",
     "line": 1,
     "keyword": "Feature",
-    "name": "Register User",
+    "name": "User Login test",
     "tags": [],
-    "uri": "src\\test\\features\\registerUser.feature"
+    "uri": "src\\test\\features\\loginGenio.feature"
   }
 ]
