@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1451185499
+              "duration": 1066490499
             }
           },
           {
@@ -26,8 +26,9 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 26826829099
+              "status": "failed",
+              "duration": 30126290300,
+              "error_message": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://elgeniox.com/\", waiting until \"load\"\n\n    at LoginGenioPage.<anonymous> (C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\pages\\loginGenioPage.ts:28:25)\n    at fulfilled (C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\pages\\loginGenioPage.ts:5:58)"
             }
           },
           {
@@ -39,8 +40,8 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:19"
             },
             "result": {
-              "status": "passed",
-              "duration": 5995597099
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -52,8 +53,8 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:23"
             },
             "result": {
-              "status": "passed",
-              "duration": 2181561300
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -65,8 +66,8 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:27"
             },
             "result": {
-              "status": "passed",
-              "duration": 161359700
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -78,8 +79,8 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:32"
             },
             "result": {
-              "status": "passed",
-              "duration": 2218899
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -91,16 +92,17 @@
               "location": "src\\test\\steps\\loginGenioSteps.ts:37"
             },
             "result": {
-              "status": "passed",
-              "duration": 114007699
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 287408900
+              "status": "failed",
+              "duration": 30021449300,
+              "error_message": "page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n\n    at World.<anonymous> (C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\hooks\\hooks.ts:66:40)\n    at C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\hooks\\hooks.ts:8:71\n    at __awaiter (C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\hooks\\hooks.ts:4:12)\n    at World.<anonymous> (C:\\Users\\rribera\\Documents\\Automation\\Automation_Web\\src\\hooks\\hooks.ts:66:12)"
             }
           }
         ],
