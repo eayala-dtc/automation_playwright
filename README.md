@@ -1,10 +1,13 @@
 Titulo: Instalacion de librerias y dependencias
 Requisito previo
-    - Tener instalado Node.js 
+    - Instalar Node.js
+    - Para abrir el proyecto instalar VS Code 
 
 Pasos de instalacion: 
-1. Instalar gestor de paquetes de npm 
+1. Instalar dependencias del proyecto
     - npm install 
+
+** En caso que no instale las dependencias del package.json continuar con la instalacion de los siguientes puntos
 
 2. Instalar playwright usando npm
     - npx playwright install
