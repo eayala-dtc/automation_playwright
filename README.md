@@ -4,7 +4,7 @@ Requisito previo
 
 Pasos de instalacion: 
 1. Instalar gestor de paquetes de npm 
-    npm install 
+    - npm install 
 
 2. Instalar playwright usando npm
     - npx playwright install
