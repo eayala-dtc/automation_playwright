@@ -35,7 +35,7 @@ When('User click on the login button', async function () {
 });
 
 Then('Login should be success', async function () {
-    const user = await assert.assertURL("https://elgeniox.com/account/login?return_url=%2Faccount%3Fview%3Dorders");
+    const user = await assert.assertURL("https://egx-development.uc.r.appspot.com/es/cuenta/login");
 
 });
 

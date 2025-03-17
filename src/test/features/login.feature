@@ -8,6 +8,6 @@ Feature: User Authentication tests
  Scenario: Login should be success
    And User enter the usernames as "ortoni"
    And User enter the passwords as "Pas1234"
-   When User click on the login buttonss
+   When User click on the login buttons
    Then Login should be success
 

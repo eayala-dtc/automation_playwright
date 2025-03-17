@@ -13,4 +13,4 @@ Feature: User Login test
 
   Examples: 
   |email                        |pass         |
-  |rribera@consultordatec.com.bo| Reneribera17|
+  |yeniset357@bmixr.com         | Ingresar4.9 |

@@ -15,21 +15,17 @@ export default class LoginGenioPage {
 
     private Elements = {
         
-        iconinit :  "details-disclosure.header__account" ,
-        secondb : "a.button--primary.header__account__login.link",
-        //userName: "#RecoverEmail",
-        //userPassword: "//input[@id='CustomerPassword']",
-        logBtn: "//button[@id='boton-login']"
+        iconinit :  "div.header_info__account" ,
+        logBtn:"button.auth_login_form__button.p-button.p-component"
     }
 
     async handleLocationPermissionPopup() {
-        const context: BrowserContext = this.page.context();
-        await context.grantPermissions(['geolocation']);
-        await this.page.goto('https://elgeniox.com/');
+        //const context: BrowserContext = this.page.context();
+        //await context.grantPermissions(['geolocation']);
+        await this.page.goto('https://egx-development.uc.r.appspot.com/es');
     }
 
     async navigateToLoginPage() {
-        //await this.base.goto("https://elgeniox.com/account/login?return_url=%2Faccount%3Fview%3Dorders");
         await this.handleLocationPermissionPopup(); // Llama al método para manejar el popup
     }
 
@@ -37,18 +33,16 @@ export default class LoginGenioPage {
         const selectsec = this.page.locator(this.Elements.iconinit);
         await selectsec.waitFor({ state: 'visible' });
         await selectsec.click();
-        await this.page.getByRole('link', {name: 'Iniciar sesión'}).click();
     }
 
     async enterEmail(email: string) {
-        const emailField = await this.page.getByRole('textbox', {name: 'Correo electrónico'})
+        const emailField = await this.page.getByRole('textbox', {name: 'Introduce tu e-mail'})
         await emailField.scrollIntoViewIfNeeded();
-        //await this.page.pause();
         await emailField.fill(email);
 
     }
     async enterPassword(password: string) {
-        await this.page.getByRole('textbox', {name: 'Contraseña'}).fill(password);
+        await this.page.getByRole('textbox', {name: 'Introduce tu contraseña'}).fill(password);
         //await this.page.getByLabel(this.Elements.userPassword).fill(password); o locator en vez del getbylabel
     }
 

@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2035772000
+              "duration": 5934723500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16364706899
+              "duration": 16507407299
             }
           },
           {
@@ -40,33 +40,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5242187099
+              "duration": 1019605600
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "User enter the email as \"rribera@consultordatec.com.bo\"",
+            "name": "User enter the email as \"yeniset357@bmixr.com\"",
             "match": {
               "location": "src\\test\\steps\\loginGenioSteps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 1516562399
+              "duration": 1172726800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "User enter the password as \"Reneribera17\"",
+            "name": "User enter the password as \"Ingresar4.9\"",
             "match": {
               "location": "src\\test\\steps\\loginGenioSteps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 395551599
+              "duration": 58076800
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2235000
+              "duration": 2026000
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79196799
+              "duration": 37586999
             }
           },
           {
@@ -100,7 +100,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 267320800
+              "duration": 2151560100
             }
           }
         ],
