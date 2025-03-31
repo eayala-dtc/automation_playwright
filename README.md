@@ -36,3 +36,4 @@ Pasos de instalacion:
 Ejecucion: 
 1. Comando para ejecutar los Tests
     - npm test o npm run test
+# egx-automation

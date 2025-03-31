@@ -1,23 +1,22 @@
-import { Given, When, Then } from "@cucumber/cucumber"
-import  LoginGenioPage  from "../../pages/loginGenioPage";
-import { fixture } from "../../hooks/pageFixture";
-import Assert from "../../helper/wrapper/assert";
-//import * as data from "../../helper/util/test-data/registerUser.json";
-import * as dotenv from 'dotenv';
-import { findSourceMap } from "module";
-dotenv.config();
-let loginPage : LoginGenioPage;
-let assert : Assert;
+import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber"
 
+import * as dotenv from 'dotenv';
+import { page } from "../../hooks/hooks";
+import LoginGenioPage from "../../pages/LoginGenioPage";
+
+dotenv.config();
+
+let loginPage : LoginGenioPage;
+
+//setDefaultTimeout(1000*60*2);
 
 Given('User navigates to the Genio_webpage', async function () {
-    loginPage = new LoginGenioPage(fixture.page);
-        assert = new Assert(fixture.page);
-        await loginPage.navigateToLoginPage();
+    await page.goto('https://egx-development.uc.r.appspot.com/es');
 });
 
 Given('User click on the login link', async function () {
-    await loginPage.clicloginlink();
+    await page.locator(`//span[normalize-space(text())='Iniciar Sesión']`).click();
+    loginPage = new LoginGenioPage(page);
 });
 
 Given('User enter the email as {string}', async function (email) {
@@ -26,20 +25,12 @@ Given('User enter the email as {string}', async function (email) {
 
 Given('User enter the password as {string}', async function (password) {
     await loginPage.enterPassword(password);
-
 });
 
 When('User click on the login button', async function () {
-    await loginPage.clickLoginButton;
-
+    await loginPage.clickLoginButton();
 });
 
 Then('Login should be success', async function () {
-    const user = await assert.assertURL("https://egx-development.uc.r.appspot.com/es/cuenta/login");
-
+    await loginPage.checkSuccessLogin();
 });
-
-//When ('Login should fail', async function (){
-  // const failureMessage = await pageFixture.page.locator("mat-error[role='alert']");
-   //await expect(failureMessage).toBeVisible();
-//});

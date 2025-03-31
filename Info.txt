@@ -16,7 +16,3 @@ Instalar libreria para manejar multiples ambientes en la ruta del proyecto
 Para hacer correr el proyecto
 1 npm test o npm run test
 2 
-
-
-
-

@@ -1,65 +1,42 @@
-import { expect, Page, BrowserContext, chromium} from "@playwright/test";
-import PlaywrightWrapper from "../helper/wrapper/PlaywrightWrappers";
-//import { AlertPopUp } from "../helper/util/test-data/AlertPopUp";
+import { Page, Locator, expect } from "@playwright/test";
 
 export default class LoginGenioPage {
-
-    private base: PlaywrightWrapper;
-    //private alertPopUp : AlertPopUp;
     
+    private emailTextBox: Locator;
+    private passwordTextBox: Locator;
+    private loginButton: Locator;
+    private miCuentaText: Locator;
 
     constructor(private page: Page) {
-        this.base = new PlaywrightWrapper(page);
-      //  this.alertPopUp = new AlertPopUp(page);
-    }
-
-    private Elements = {
-        
-        iconinit :  "div.header_info__account" ,
-        logBtn:"button.auth_login_form__button.p-button.p-component"
-    }
-
-    async handleLocationPermissionPopup() {
-        //const context: BrowserContext = this.page.context();
-        //await context.grantPermissions(['geolocation']);
-        await this.page.goto('https://egx-development.uc.r.appspot.com/es');
-    }
-
-    async navigateToLoginPage() {
-        await this.handleLocationPermissionPopup(); // Llama al método para manejar el popup
-    }
-
-    async clicloginlink(){
-        const selectsec = this.page.locator(this.Elements.iconinit);
-        await selectsec.waitFor({ state: 'visible' });
-        await selectsec.click();
+        this.emailTextBox = page.getByRole('textbox', { name: 'Introduce tu e-mail' });
+        this.passwordTextBox = page.getByRole('textbox', { name: 'Introduce tu contraseña' });
+        this.loginButton = page.getByRole('button', { name: 'Ingresar' });
+        this.miCuentaText = page.getByText('Ver mi cuenta');
     }
 
     async enterEmail(email: string) {
-        const emailField = await this.page.getByRole('textbox', {name: 'Introduce tu e-mail'})
-        await emailField.scrollIntoViewIfNeeded();
-        await emailField.fill(email);
-
+        await this.emailTextBox.fill(email);
     }
+
     async enterPassword(password: string) {
-        await this.page.getByRole('textbox', {name: 'Introduce tu contraseña'}).fill(password);
-        //await this.page.getByLabel(this.Elements.userPassword).fill(password); o locator en vez del getbylabel
+        await this.passwordTextBox.fill(password);
     }
 
     async clickLoginButton() {
-        await this.base.waitAndClick(this.Elements.logBtn);
+        await this.loginButton.click();
     }
     
-    getErrorMessage() {
-        return this.page.getByRole("alert");
-    }
-
     async loginUser(email: string, password: string) {
-        await this.enterEmail(email);
-        await this.enterPassword(password);
-        await this.clickLoginButton();
+        this.enterEmail(email);
+        this.enterPassword(password);
+        this.clickLoginButton();
     }
 
-   
+    async checkSuccessLogin() {
+        try {
+            await expect(this.miCuentaText).toBeVisible();
+        } catch (error) {
+            console.log("Error: " + error);
+        }
+    }
 }
-
